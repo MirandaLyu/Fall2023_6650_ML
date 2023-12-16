@@ -58,7 +58,7 @@ public class AlbumServlet extends HttpServlet {
     // Generate a unique albumID using UUID
     String albumID = UUID.randomUUID().toString();
     // Store the album into DB
-    Jedis redis = new Jedis("ec2-34-222-153-178.us-west-2.compute.amazonaws.com", 6379);
+    Jedis redis = new Jedis("localhost", 6379);
     redis.hset(albumID, "artist", profile.getArtist());
     redis.hset(albumID, "title", profile.getTitle());
     redis.hset(albumID, "year", profile.getYear());
@@ -88,7 +88,7 @@ public class AlbumServlet extends HttpServlet {
     String albumID = pathInfo.substring(1); // pathInfo begins with "/"
 
     // retrieve info
-    Jedis redis = new Jedis("ec2-34-222-153-178.us-west-2.compute.amazonaws.com", 6379);
+    Jedis redis = new Jedis("localhost", 6379);
     String artist;
     String title;
     String year;
