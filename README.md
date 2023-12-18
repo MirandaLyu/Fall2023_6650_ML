@@ -7,3 +7,6 @@ For Assignment 1,<br/>
 
  For Assignment 2,<br/>
   &ensp; The folder "A2NewCode" embodies the change I made on the client side and on the server side
+
+ For Assignment 3,<br/>
+  &ensp; The file "ReviewServlet" is the new Servlet for LikeApi, "ReviewConsumer" is the consumer file interacting with RabbitMQ. "ClientPart2" has some new testing rules
